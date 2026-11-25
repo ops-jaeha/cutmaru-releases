@@ -25,7 +25,7 @@ Windows x64 프리릴리즈는 [GitHub Releases](https://github.com/ops-jaeha/cu
 2. 운영자가 발급한 라이선스 키를 입력하고 한국어 모델을 내려받는다.
 3. SOOP에서 확보한 원본 MP4를 열고 분석을 시작한다.
 4. 후보, 대본 검색과 썸네일을 확인한다. 시청자가 원본 기준으로 남긴 시간이 있다면 붙여넣는다.
-5. 채택한 구간을 저장한다. 프리미어를 사용하는 경우 지원 버전에서 편집용 XML을 가져올 수 있다.
+5. 채택한 구간을 저장한다. Premiere Pro는 프리미어 XML을, DaVinci Resolve는 아래 편별 XML을 사용한다.
 
 ## 라이선스
 
@@ -45,7 +45,7 @@ Windows x64 프리릴리즈는 [GitHub Releases](https://github.com/ops-jaeha/cu
 | 그래픽카드 | 호환 GPU에서 가속 가능. CPU 전용 PC에서도 분석 가능 |
 | 입력 | 로컬 SOOP 원본 MP4 |
 | 인터넷 | 첫 모델 다운로드, 라이선스 활성화 및 갱신에 사용 |
-| 편집 프로그램 | 앱 안에서 원본과 후보 검토 가능. 프리미어 연동은 선택 기능 |
+| 편집 프로그램 | 앱 안에서 원본과 후보 검토 가능. Premiere Pro 및 DaVinci Resolve용 XML 내보내기 |
 
 ## 설치 파일 확인
 
@@ -56,3 +56,11 @@ Get-FileHash -Algorithm SHA256 -LiteralPath '.\cutmaru-setup.exe'
 ```
 
 릴리즈별 사용 범위와 서드파티 고지는 다운로드 페이지와 함께 제공한다.
+
+## DaVinci Resolve에서 열기
+
+1. cutmaru에서 컷을 채택하고 각 컷의 편과 순서를 정한다.
+2. **DaVinci Resolve 1편 XML** 또는 **DaVinci Resolve 2편 XML**을 눌러 편별 파일을 저장한다.
+3. Resolve에서 **File → Import → Timeline**으로 XML을 연다. 원본을 못 찾으면 같은 MP4를 Media Pool에 추가하거나 원본 폴더를 지정한다.
+
+[DaVinci Resolve 설명서](https://documents.blackmagicdesign.com/UserManuals/DaVinciResolveReferenceManual.pdf)
