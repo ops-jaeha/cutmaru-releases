@@ -64,3 +64,12 @@ Get-FileHash -Algorithm SHA256 -LiteralPath '.\cutmaru-setup.exe'
 3. Resolve에서 **File → Import → Timeline**으로 XML을 연다. 원본을 못 찾으면 같은 MP4를 Media Pool에 추가하거나 원본 폴더를 지정한다.
 
 [DaVinci Resolve 설명서](https://documents.blackmagicdesign.com/UserManuals/DaVinciResolveReferenceManual.pdf)
+
+## 편집용 자막
+
+편집용 SRT가 포함된 버전에서는 **편집 1편 자막 SRT** 또는 **편집 2편 자막 SRT**로 채택한 컷에 맞춘 자막을 저장한다. 같은 편의 편집 타임라인 시작점에 SRT를 배치한다. **대본 SRT**는 원본 시간 기준이다.
+
+## SOOP 링크와 편집 MP4
+
+- **공개 다시보기 받기**에 SOOP 플레이어 주소를 입력하고 저장 위치를 정한다. 지원되는 공개 VOD의 영상 파트를 하나로 합쳐 연다. 로그인·구독 등 별도 권한이 필요한 영상은 SOOP에서 받은 MP4를 연다. 채팅은 TXT 또는 CSV를 가져온다.
+- **편집 1편 MP4** 또는 **편집 2편 MP4**는 채택한 컷을 연결한다. **컷 사이 TV 노이즈 화면·효과음**을 켜면 컷 사이에 0.3초 전환을 넣는다. XML과 편집용 SRT는 컷 타임라인 기준이다.
